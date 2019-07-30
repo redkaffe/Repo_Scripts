@@ -1,0 +1,8 @@
+set LOGFILE1=%SystemDrive%\App1_Install.log 
+echo Installing APP1 >> %LOGFILE1% 
+PowerShell.exe -ExecutionPolicy Unrestricted .\install_AV.ps1 >> %LOGFILE1% 
+echo result: %ERRORLEVEL% >> %LOGFILE1%
+set LOGFILE2=%SystemDrive%\App2_Install.log 
+echo Installing APP2 >> %LOGFILE2% 
+PowerShell.exe -ExecutionPolicy Unrestricted .\install_WSO_Agent.ps1 >> %LOGFILE2% 
+echo result: %ERRORLEVEL% >> %LOGFILE2%
